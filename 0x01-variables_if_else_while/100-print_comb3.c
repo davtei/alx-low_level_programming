@@ -9,16 +9,23 @@
  */
 int main(void)
 {
-	int d;
+	int singl = '0';
+	int doubl = '0';
 
-	for (d = 0; d <= 89; d++)
+	for (doubl = '0'; doubl <= '9'; doubl++)
 	{
-		putchar((d/10) + '0');
-		putchar((d%10) + '0');
-		if (d < 89)
+		for (singl = '0'; singl <= '9'; singl++)
 		{
-			putchar(',');
-			putchar(' ');
+			if (!((singl == doubl) || (singl < doubl)))
+			{
+				putchar(doubl);
+				putchar(singl);
+				if (!((singl == '9') && (doubl == '8')))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
 	putchar('\n');
