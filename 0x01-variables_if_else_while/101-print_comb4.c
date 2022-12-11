@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main -  Printing combinations of three digits with putchar() using 6 max putchar() functions.
- * Return: Always 0 (Success)
+ * main -  Printing combinations of three digits with putchar() using 6 max.
+ * Return: Always 0
  */
 int main(void)
 {
@@ -15,12 +15,13 @@ int main(void)
 		{
 			for (singl = '0'; singl <= '9'; singl++)
 			{
-				if (!((singl == doubl) || (doubl == tripl) || (doubl > singl) || (tripl > doubl)))
+				if (!((singl == doubl) || (doubl == tripl) ||
+							(doubl > singl) || (tripl > doubl)))
 				{
 					putchar(tripl);
 					putchar(doubl);
 					putchar(singl);
-					if (!((singl == '9') && (doubl  == '8') && (tripl == '7')))
+					if (!(singl == '9' && doubl  == '8' && tripl == '7'))
 					{
 						putchar(',');
 						putchar(' ');
