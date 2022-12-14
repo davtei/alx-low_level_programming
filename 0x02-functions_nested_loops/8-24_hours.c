@@ -7,8 +7,8 @@
  */
 void jack_bauer(void)
 {
-	int hr = 0;
-	int min = 0;
+	int hr;
+	int min;
 
 	if (hr = 0; hr <= 23; hr++)
 	{
