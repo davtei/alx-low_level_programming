@@ -2,7 +2,7 @@
 /**
 * print_last_digit - Function to print last digit of inputs.
 *
-* @d: number supplied.
+* @n: number supplied.
 *
 * Return: last digit of a number.
 */
