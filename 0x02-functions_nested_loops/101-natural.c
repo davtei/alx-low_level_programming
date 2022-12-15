@@ -12,7 +12,7 @@ int main(void)
 
 	three = 0;
 	five = 0;
-	multi = 0;
+	sum = 0;
 
 	for (multi = 0; multi < 1024; multi++)
 	{
@@ -25,7 +25,7 @@ int main(void)
 			five = (five + multi);
 		}
 	}
-	multi = three + five;
+	sum = three + five;
 	printf("%ul\n", multi);
 	return (0);
 }
