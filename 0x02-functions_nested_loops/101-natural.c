@@ -1,0 +1,31 @@
+#include <stdio.h>
+/**
+ * main - program that prints the sum of all multiples of 3 or 5 below
+ * 1024 (excluded), followed by a new line.
+ *
+ * return: Always 0 (Success).
+ */
+int main(void)
+{
+	int long int three, five, sum;
+	int multi;
+
+	three = 0;
+	five = 0;
+	multi = 0;
+
+	for (multi = 0; multi < 1024; multi++)
+	{
+		if ((multi % 3) == 0)
+		{
+			three = (three + multi)
+		}
+		else if ((multi % 5) == 0)
+		{
+			five = (five + multi)
+		}
+	}
+	multi = three + five;
+	printf("%ul\n", multi);
+	return (0);
+}
