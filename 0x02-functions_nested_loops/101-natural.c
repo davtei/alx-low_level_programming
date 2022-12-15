@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int long int three, five, sum;
+	unsigned long int three, five, sum;
 	int multi;
 
 	three = 0;
@@ -18,11 +18,11 @@ int main(void)
 	{
 		if ((multi % 3) == 0)
 		{
-			three = (three + multi)
+			three = (three + multi);
 		}
 		else if ((multi % 5) == 0)
 		{
-			five = (five + multi)
+			five = (five + multi);
 		}
 	}
 	multi = three + five;
