@@ -13,7 +13,7 @@ int main(void)
 	{
 		f = a + b;
 		a = b;
-		b = t;
+		b = f;
 		printf("%lu", f);
 
 		if (t < 97)
