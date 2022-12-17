@@ -9,30 +9,17 @@
  */
 int main(void)
 {
-	long int n;
-	long int maxi;
-	long int z;
+	long int n, lg;
 
 	n = 612852475143;
-	maxi = -1;
-
-	while (n % 2 == 0)
+	for (lg = 2; lg <= n; lg++)
 	{
-		maxi = 2;
-		n /= 2;
-	}
-	for (z = 3; z <= sqrt(n); z = z + 2)
-	{
-		while (n % z == 0)
+		if (n % lg == 0)
 		{
-			maxi = z;
-			n = n / z;
+			n /= lg;
+			lg--;
 		}
 	}
-	if (n > 2)
-	{
-		maxi = n;
-	}
-	printf("%ld\n", maxi)
+	printf("%ld\n", lg);
 	return (0);
 }
