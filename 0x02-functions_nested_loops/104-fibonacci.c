@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - program the prints the first 90 terms in the Fibonacci
+ * main - program the prints the first 98 terms in the Fibonacci
  * sequence, followed by a new line.
  * Return: Always 0 (Success)
  */
@@ -9,7 +9,7 @@ int main(void)
 	int t = 0;
 	unsigned long int a = 0, b = 1, f = 0;
 
-	while (t < 100)
+	while (t < 98)
 	{
 		f = a + b;
 		a = b;
