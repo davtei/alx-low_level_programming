@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * _strncat - function that appends n bytes of the src string to the dest string,
+ * _strncat - function that appends n bytes of the src string to the
+ * dest string,
  * overwriting the terminating null byte (\0) at the end of dest,
  * @dest: destination string
  * @src: source string
@@ -16,10 +17,6 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		len1++;
 	}
-	/*while (src[len2] != n)
-	{
-		len2++;
-	}*/
 	while (i < n && src[i] != '\0')
 	{
 		dest[len1 + i] = src[i];
