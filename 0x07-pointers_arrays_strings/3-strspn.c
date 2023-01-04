@@ -3,7 +3,7 @@
 /**
  * _strspn - function that gets the length of a prefix substring.
  * @s: string to search substring from
- * @accecpt: accepted bytes
+ * @accept: accepted bytes
  * Return: number of bytes in the initial segment of s.
  */
 unsigned int _strspn(char *s, char *accept)
