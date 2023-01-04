@@ -2,11 +2,11 @@
 
 /**
  * _strchr - function that locates a character in a string
- * @c: search query
  * @s: string to search
+ * @c: search query
  * Return: pointer to c or NULL.
  */
-*_strchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
 	unsigned int i;
 
@@ -14,10 +14,11 @@
 	{
 		if (*(s + i) == c)
 		{
-			retun (s +);
+			return (s + i);
 		}
 	}
 	if (*(s + i) == c)
 	{
 		return ('\0');
 	}
+}
