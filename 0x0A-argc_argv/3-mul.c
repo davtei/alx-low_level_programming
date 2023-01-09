@@ -5,8 +5,10 @@
  * main - program that multiplies two numbers, and returns the result,
  * followed by a new line.
  * Assuming the two numbers and the result can be stored in an integer.
- * Prints Error followed by a new line and return 1 if the program does not receive
- * two arguments.
+ * Prints Error followed by a new line
+ * and return 1 if the program does not receive two arguments.
+ * @argc: number of arguments passed to main.
+ * @argv: array of pointers to strings of arguments.
  * Return: Always 0 (Success), otherwise 1.
  */
 int main(int argc, char *argv[])
