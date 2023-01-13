@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * array_range - function that creates an array of integers. 
+ * array_range - function that creates an array of integers.
  * The array created contains all the values from min (included) to
  * max (included), ordered from min to max.
  * If min > max, return NULL.
