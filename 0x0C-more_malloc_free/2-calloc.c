@@ -9,7 +9,7 @@
  * If nmemb or size is 0, then _calloc returns NULL.
  * @nmemb: number of elements of string.
  * @size: bytes of memory allocated.
- * Return: pointer to the allocated memory (Success), otherwise NULL (Fail).
+ * Return: pointer to the allocated memory (Success), otherwise NULL (Fail)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
