@@ -8,7 +8,7 @@
  * If min > max, return NULL.
  * @min: minimum value.
  * @max: maximum value.
- * Return: the pointer to the newly created array (Success), otherwise NULL.
+ * Return: the pointer to the newly created array (Success), otherwise NULL
  */
 int *array_range(int min, int max)
 {
