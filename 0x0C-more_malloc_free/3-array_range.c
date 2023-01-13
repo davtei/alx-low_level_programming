@@ -19,4 +19,6 @@ int *array_range(int min, int max)
 	if (!a)
 		return (0);
 	while (i <= max - min)
-		a[i++
+		a[i++] = x++;
+	return (a);
+}
