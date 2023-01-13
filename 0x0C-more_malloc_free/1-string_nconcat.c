@@ -12,6 +12,7 @@
  * if NULL is passed, it is treated as an empty string.
  * Return: pointer to newly allocated space (Success), otherwise NULL (Fail).
  */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
 	unsigned int len1, len2, i;
