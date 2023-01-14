@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_grid - function that frees an array
+ * free__grid - function that frees an array
  * @grid: multidimensional array of char
  * @height: height of the array
  * Return: void
