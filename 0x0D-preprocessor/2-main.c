@@ -3,7 +3,7 @@
 /**
  * main - program that prints the name of the file it was created from,
  * followed by a new line.
- * Result: Always 0 (Success).
+ * Return: Always 0 (Success).
  */
 int main(void)
 {
