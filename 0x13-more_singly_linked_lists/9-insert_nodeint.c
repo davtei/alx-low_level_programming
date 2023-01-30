@@ -6,6 +6,7 @@
  * @head: head of the linked list.
  * @idx: index of the list where the new node should be added.
  * Index starts at 0.
+ * @n: int element.
  * If it is not possible to add the new node at the idx, returns NULL.
  * Return: address of the new node (Success), otherwise NULL (Fail).
  */
