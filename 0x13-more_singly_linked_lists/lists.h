@@ -21,7 +21,7 @@ typedef struct listint_s
 
 /**
  * struct listp_s - singly linked list
- * @p: pointers to nodes
+ * @p: pointers to the nodes
  * @next: points to the next node
  *
  * Description: singly linked list node structure
