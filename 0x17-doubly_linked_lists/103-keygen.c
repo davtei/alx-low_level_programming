@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 	while (xters < len)
 	{
 		xter = xter + argv[1][xters];
-		xters = xters += 1;
+		xters += 1;
 	}
 	keygen[1] = ((char *)alpha)[(xter ^ 79) & 63];
 	/* func_3 */
