@@ -3,81 +3,91 @@
 #include <time.h>
 
 /**
- * largest_num - function that finds the largest number
- * @uname: username
+ * f4 - finds the biggest number
+ *
+ * @usrn: username
  * @len: length of username
- * Return: largest number
+ * Return: the biggest number
  */
-int largest_num(char *uname, int len)
+int f4(char *usrn, int len)
 {
-	int xter, xters;
+	int ch;
+	int vch;
 	unsigned int rand_num;
 
-	xter = *uname;
-	xters = 0;
+	ch = *usrn;
+	vch = 0;
 
-	while (xters < len)
+	while (vch < len)
 	{
-		if (xter < uname[xters])
-			xter = uname[xters];
-		xters += 1;
+		if (ch < usrn[vch])
+			ch = usrn[vch];
+		vch += 1;
 	}
-	srand(xter ^ 14);
+
+	srand(ch ^ 14);
 	rand_num = rand();
 
 	return (rand_num & 63);
 }
 
 /**
- * mulx - function that multiplies each character of username
- * @uname: username
+ * f5 - multiplies each char of username
+ *
+ * @usrn: username
  * @len: length of username
- * Return: product of character
+ * Return: multiplied char
  */
-int mulx(char *uname, int len)
+int f5(char *usrn, int len)
 {
-	int xter, xters;
+	int ch;
+	int vch;
 
-	xter = xters = 0;
+	ch = vch = 0;
 
-	while (xters < len)
+	while (vch < len)
 	{
-		xter = xter + uname[xters] * uname[xters];
-		xters += 1;
+		ch = ch + usrn[vch] * usrn[vch];
+		vch += 1;
 	}
-	return (((unsigned int)xter ^ 239) & 63);
+
+	return (((unsigned int)ch ^ 239) & 63);
 }
 
 /**
- * rand_xter - function that generates a random character
- * @uname: username
- * Return: random character
+ * f6 - generates a random char
+ *
+ * @usrn: username
+ * Return: a random char
  */
-int rand_xter(char *uname)
+int f6(char *usrn)
 {
-	int xter, xters;
+	int ch;
+	int vch;
 
-	xter = xters = 0;
+	ch = vch = 0;
 
-	while (xters < *uname)
+	while (vch < *usrn)
 	{
-		xter = rand();
-		xters += 1;
+		ch = rand();
+		vch += 1;
 	}
-	return (((unsigned int)xter ^ 220) & 63);
+
+	return (((unsigned int)ch ^ 229) & 63);
 }
 
 /**
  * main - Entry point
- * @argc: number of arguments
- * @argv: vector of arguments
- * Return: Always 0 (Success)
+ *
+ * @argc: arguments count
+ * @argv: arguments vector
+ * Return: Always 0
  */
 int main(int argc, char **argv)
 {
 	char keygen[7];
-	int len, xter, xters;
-	long alpha[] = {
+	int len, ch, vch;
+	long alph[] = {
 		0x3877445248432d41, 0x42394530534e6c37, 0x4d6e706762695432,
 		0x74767a5835737956, 0x2b554c59634a474f, 0x71786636576a6d34,
 		0x723161513346655a, 0x6b756f494b646850 };
@@ -85,33 +95,33 @@ int main(int argc, char **argv)
 
 	for (len = 0; argv[1][len]; len++)
 		;
-	/* func_1 */
-	keygen[0] = ((char *)alpha)[(len ^ 59) & 63];
-	/* func_2 */
-	xter = xters = 0;
-	while (xters < len)
+	/* ----------- f1 ----------- */
+	keygen[0] = ((char *)alph)[(len ^ 59) & 63];
+	/* ----------- f2 ----------- */
+	ch = vch = 0;
+	while (vch < len)
 	{
-		xter = xter + argv[1][xters];
-		xters += 1;
+		ch = ch + argv[1][vch];
+		vch = vch + 1;
 	}
-	keygen[1] = ((char *)alpha)[(xter ^ 79) & 63];
-	/* func_3 */
-	xter = 1;
-	xters = 0;
-	while (xters < len)
+	keygen[1] = ((char *)alph)[(ch ^ 79) & 63];
+	/* ----------- f3 ----------- */
+	ch = 1;
+	vch = 0;
+	while (vch < len)
 	{
-		xter = argv[1][xters] * xter;
-		xters = xters + 1;
+		ch = argv[1][vch] * ch;
+		vch = vch + 1;
 	}
-	keygen[2] = ((char *)alpha)[(xter ^ 85) & 63];
-	/* largest_num */
-	keygen[3] = ((char *)alpha)[largest_num(argv[1], len)];
-	/* mulx */
-	keygen[4] = ((char *)alpha)[mulx(argv[1], len)];
-	/* rand_xter */
-	keygen[5] = ((char *)alpha)[rand_xter(argv[1])];
+	keygen[2] = ((char *)alph)[(ch ^ 85) & 63];
+	/* ----------- f4 ----------- */
+	keygen[3] = ((char *)alph)[f4(argv[1], len)];
+	/* ----------- f5 ----------- */
+	keygen[4] = ((char *)alph)[f5(argv[1], len)];
+	/* ----------- f6 ----------- */
+	keygen[5] = ((char *)alph)[f6(argv[1])];
 	keygen[6] = '\0';
-	for (xter = 0; keygen[xter]; xter++)
-		printf("%c", keygen[xter]);
+	for (ch = 0; keygen[ch]; ch++)
+		printf("%c", keygen[ch]);
 	return (0);
 }
