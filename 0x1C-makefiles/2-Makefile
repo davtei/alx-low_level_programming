@@ -10,10 +10,10 @@ all: $(OBJ)
 clean:
 	$(RM) *~ $(NAME)
 
-objclean:
+oclean:
 	$(RM) $(OBJ)
 
 fclean:
-	clean objclean
+	clean oclean
 
 re: fclean all
